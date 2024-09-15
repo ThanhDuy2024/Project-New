@@ -821,6 +821,11 @@ body {
     font-size: 15px;
   }
 }
+@media (max-width: 536.98px) {
+  .footer .button {
+    font-size: 12px;
+  }
+}
 
 .breadcrumb {
   height: 34px;

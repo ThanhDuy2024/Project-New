@@ -34,6 +34,7 @@ body {
         padding-left: 16px;
         padding-right: 16px;
     }
+     
 }
 
 .button {
@@ -977,6 +978,11 @@ body {
         }
     }
 
+    @media (max-width: 536.98px) {
+        .button {
+            font-size: 12px;
+        }
+    }
 }
 // end footer
 
