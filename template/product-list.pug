@@ -1,0 +1,177 @@
+extend layouts/default.pug
+
+block head
+    title Danh sach san pham 
+block main
+    .breadcrumb 
+        .container 
+            ul.breadcrumb__list 
+                li.breadcrumb__item 
+                    a(href="#") Trang chủ
+                li.breadcrumb__item 
+                    a(href="#") Chó
+                li.breadcrumb__item 
+                    a(href="#") Chó nhỏ
+    //- Section-3
+    include partials/section-3.pug
+    //- End section-3   
+
+    //- Layout
+    .layout-product 
+        .container 
+            .layout-product__wrap 
+                .layout-product__left 
+                    .filters 
+                        .filters__title 
+                            img(src="assets/images/icon-filter.svg", alt="")
+                            span Bộ lọc
+                        .filters__list 
+                            .filters__item
+                                .filters__item-title Giống
+                                .filters__item-box
+                                    .filters__item-choose
+                                        input(type="checkbox" name="giong" value="Đực" id="duc")
+                                        label(for="duc") Đực
+                                    .filters__item-choose
+                                        input(type="checkbox" name="giong" value="Cái" id="cai")
+                                        label(for="cai") Cái
+                            .filters__item
+                                .filters__item-title Màu sắc
+                                .filters__item-box
+                                    .filters__item-choose
+                                        input(type="checkbox" name="color" value="Xam" id="Xam")
+                                        label(for="Xam") Xám
+                                    .filters__item-choose
+                                        input(type="checkbox" name="color" value="Den" id="Den")
+                                        label(for="Den") Đen
+                            .filters__item
+                                .filters__item-title Kích thước
+                                .filters__item-box
+                                    .filters__item-choose
+                                        input(type="checkbox" name="size" value="size" id="nho")
+                                        label(for="nho") Nhỏ
+                                    .filters__item-choose
+                                        input(type="checkbox" name="size" value="size" id="vua")
+                                        label(for="vua") Vừa
+                .layout-product__right
+                    .box-head 
+                        .box-head__left 
+                            //- .box-head__sub-title Có gì mới?
+                            h2.box-head__title Chó nhỏ
+                        .box-head__filter 
+                            img(src="assets/images/icon-filter.svg", alt="")
+                            span Bộ lọc
+                    -
+                        var pets = [
+                            {
+                                image: 'assets/images/pet-1.jpg',
+                                title: 'MO231 - Pomeranian Trắng',
+                                gender: 'Đực',
+                                age: '02 tháng',
+                                price: "6.000.000 VND"
+                            },
+                            {
+                                image: 'assets/images/pet-1.jpg',
+                                title: 'MO231 - Pomeranian Trắng',
+                                gender: 'Đực',
+                                age: '02 tháng',
+                                price: "6.000.000 VND"
+                            },
+                            {
+                                image: 'assets/images/pet-1.jpg',
+                                title: 'MO231 - Pomeranian Trắng',
+                                gender: 'Đực',
+                                age: '02 tháng',
+                                price: "6.000.000 VND"
+                            },
+                            {
+                                image: 'assets/images/pet-1.jpg',
+                                title: 'MO231 - Pomeranian Trắng',
+                                gender: 'Đực',
+                                age: '02 tháng',
+                                price: "6.000.000 VND"
+                            },
+                            {
+                                image: 'assets/images/pet-1.jpg',
+                                title: 'MO231 - Pomeranian Trắng',
+                                gender: 'Đực',
+                                age: '02 tháng',
+                                price: "6.000.000 VND"
+                            },
+                            {
+                                image: 'assets/images/pet-1.jpg',
+                                title: 'MO231 - Pomeranian Trắng',
+                                gender: 'Đực',
+                                age: '02 tháng',
+                                price: "6.000.000 VND"
+                            },
+                            {
+                                image: 'assets/images/pet-1.jpg',
+                                title: 'MO231 - Pomeranian Trắng',
+                                gender: 'Đực',
+                                age: '02 tháng',
+                                price: "6.000.000 VND"
+                            },
+                            {
+                                image: 'assets/images/pet-1.jpg',
+                                title: 'MO231 - Pomeranian Trắng',
+                                gender: 'Đực',
+                                age: '02 tháng',
+                                price: "6.000.000 VND"
+                            },
+                            {
+                                image: 'assets/images/pet-1.jpg',
+                                title: 'MO231 - Pomeranian Trắng',
+                                gender: 'Đực',
+                                age: '02 tháng',
+                                price: "6.000.000 VND"
+                            }
+                        ];
+                    .section-2__wrap 
+                        each pet in pets
+                            .section-2__item.section-2__item--three
+                                .section-2__image 
+                                    a(href="#")
+                                        img(src=pet.image, alt=pet.title)
+                                .section-2__content 
+                                    h3.section-2__title 
+                                        a(href="#") #{pet.title}
+                                    .section-2__infor
+                                        .section-2__infor-item Giống: <span>#{pet.gender}</span>
+                                        .section-2__infor-item Tuổi: <span>#{pet.age}</span>
+                                    .section-2__price #{pet.price}
+                    .pagination
+                        ul.pagination__list
+                            li 
+                                a(href="#" class="pagination__link") <i class="fa-solid fa-arrow-left"></i>
+                            li 
+                                a(href="#" class="pagination__link pagination__link--active") 1
+                            li 
+                                a(href="#" class="pagination__link") 2
+                            li 
+                                a(href="#" class="pagination__link") 3
+                            li 
+                                a(href="#" class="pagination__link") 4
+                            li 
+                                a(href="#" class="pagination__link") ...
+                            li 
+                                a(href="#" class="pagination__link") 28
+                            li 
+                                a(href="#" class="pagination__link") <i class="fa-solid fa-arrow-right"></i>
+
+
+
+
+        //- end layout
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,157 @@
+extend layouts/default.pug
+
+block head
+    title Trang chu
+block main 
+        .section-1 
+            .container 
+                .section-1__wrap
+                    .section-1__bg-head 
+                    .section-1__content
+                        .section-1__bg-1
+                            img(src="assets/images/section-1-bg-1.svg") 
+                        h1.section-1__title Thêm Một Bạn
+                        h2.section-1__sub-title Thêm Ngàn Niềm Vui! 
+                        p.section-1__desc Có một con thú cưng đồng nghĩa với việc bạn có thêm niềm vui mới. Chúng tôi có hơn 200 con thú cưng khác nhau có thể đáp ứng nhu cầu của bạn
+                        .section-1__button 
+                            a(class="button" href="#") Giới thiệu <i class="fa-regular fa-circle-play"></i>
+                            a(class="button button-primary" href="#") Khám phá ngay
+                        .section-1__bg-2 
+                            img(src="assets/images/section-1-bg-2.svg") 
+                    .section-1__image
+                        img(class="section-1__thumb" src="assets/images/image-1.png") 
+                        img(class="section-1__bg-3" src="assets/images/section-1-bg-3.svg")
+        //-End Section-1
+        //- Section-2
+        .section-2 
+            .container
+                .box-head 
+                    .box-head__left 
+                        .box-head__sub-title Có gì mới?
+                        h2.box-head__title một số vật nuôi của chúng tôi
+                    .box-head__right 
+                        a(class="button button-primary") Xem thêm <i class="fa-solid fa-angle-right"></i>
+                -
+                    var pets = [
+                        {
+                            image: 'assets/images/pet-1.jpg',
+                            title: 'MO231 - Pomeranian Trắng',
+                            gender: 'Đực',
+                            age: '02 tháng',
+                            price: "6.000.000 VND"
+                        },
+                        {
+                            image: 'assets/images/pet-1.jpg',
+                            title: 'MO231 - Pomeranian Trắng',
+                            gender: 'Đực',
+                            age: '02 tháng',
+                            price: "6.000.000 VND"
+                        },
+                        {
+                            image: 'assets/images/pet-1.jpg',
+                            title: 'MO231 - Pomeranian Trắng',
+                            gender: 'Đực',
+                            age: '02 tháng',
+                            price: "6.000.000 VND"
+                        },
+                        {
+                            image: 'assets/images/pet-1.jpg',
+                            title: 'MO231 - Pomeranian Trắng',
+                            gender: 'Đực',
+                            age: '02 tháng',
+                            price: "6.000.000 VND"
+                        },
+                        {
+                            image: 'assets/images/pet-1.jpg',
+                            title: 'MO231 - Pomeranian Trắng',
+                            gender: 'Đực',
+                            age: '02 tháng',
+                            price: "6.000.000 VND"
+                        },
+                        {
+                            image: 'assets/images/pet-1.jpg',
+                            title: 'MO231 - Pomeranian Trắng',
+                            gender: 'Đực',
+                            age: '02 tháng',
+                            price: "6.000.000 VND"
+                        },
+                        {
+                            image: 'assets/images/pet-1.jpg',
+                            title: 'MO231 - Pomeranian Trắng',
+                            gender: 'Đực',
+                            age: '02 tháng',
+                            price: "6.000.000 VND"
+                        },
+                        {
+                            image: 'assets/images/pet-1.jpg',
+                            title: 'MO231 - Pomeranian Trắng',
+                            gender: 'Đực',
+                            age: '02 tháng',
+                            price: "6.000.000 VND"
+                        }
+                    ];
+                .section-2__wrap 
+                    each pet in pets
+                        .section-2__item
+                            .section-2__image 
+                                a(href="#")
+                                    img(src=pet.image, alt=pet.title)
+                            .section-2__content 
+                                h3.section-2__title 
+                                    a(href="#") #{pet.title}
+                                .section-2__infor
+                                    .section-2__infor-item Giống: <span>#{pet.gender}</span>
+                                    .section-2__infor-item Tuổi: <span>#{pet.age}</span>
+                                .section-2__price #{pet.price}
+                .section-2__button-bottom 
+                    a(href="#" class="button") Xem Thêm <i class="fa-solid fa-angle-right"></i>
+        //- End section-2
+        //- Section-3
+        include partials/section-3.pug
+        //- End section-3
+        //- Section-4
+        .section-4 
+            .container 
+                .box-head 
+                    .box-head__left 
+                        .box-head__sub-title Có thể bạn đã biết?
+                        .box-head__title Kiến thức thú cưng hữu ích
+                    .box-head__right 
+                        a(class="button") Xem thêm <i class="fa-solid fa-angle-right"></i>
+
+                -
+                    var items = [
+                        {
+                            image: 'assets/images/post-1.jpg',
+                            tag: 'Kiến thức thú cưng',
+                            title: 'Pomeranian là gì? Cách nhận biết chó Pomeranian',
+                            desc: 'Pomeranian hay còn gọi là chó Pomeranian (chó Pom) luôn nằm trong top những thú cưng dễ thương nhất. Không chỉ vậy, giống chó xiếc nhỏ nhắn, đáng yêu, thông minh, thân thiện và khéo léo.'
+                        },
+
+                         {
+                            image: 'assets/images/post-2.jpg',
+                            tag: 'Kiến thức thú cưng',
+                            title: 'Pomeranian là gì? Cách nhận biết chó Pomeranian',
+                            desc: 'Pomeranian hay còn gọi là chó Pomeranian (chó Pom) luôn nằm trong top những thú cưng dễ thương nhất. Không chỉ vậy, giống chó xiếc nhỏ nhắn, đáng yêu, thông minh, thân thiện và khéo léo.'
+                        },
+                         {
+                            image: 'assets/images/post-3.jpg',
+                            tag: 'Kiến thức thú cưng',
+                            title: 'Pomeranian là gì? Cách nhận biết chó Pomeranian',
+                            desc: 'Pomeranian hay còn gọi là chó Pomeranian (chó Pom) luôn nằm trong top những thú cưng dễ thương nhất. Không chỉ vậy, giống chó xiếc nhỏ nhắn, đáng yêu, thông minh, thân thiện và khéo léo.'
+                        }
+                    ];
+                .section-4__wrap 
+                    each item in items 
+                        .section-4__item
+                            .section-4__image
+                                img(src=item.image alt=item.title)
+                            .section-4__content 
+                                .section-4__tag  #{item.tag}     
+                                .section-4__title 
+                                    a(href="#") #{item.title}
+                                .section-4__desc #{item.desc}
+                .section-4__button-bottom 
+                    a(href="#" class="button") Xem Thêm <i class="fa-solid fa-angle-right"></i>
+
+        //- End section-4
