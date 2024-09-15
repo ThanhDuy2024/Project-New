@@ -978,11 +978,34 @@ body {
         }
     }
 
-    @media (max-width: 536.98px) {
-        .button {
-            font-size: 12px;
+    @media (max-width: 565.98px) {
+        &__item a {
+            font-size: 14px;
         }
     }
+
+    @media (max-width: 565.98px) {
+        &__item a {
+            font-size: 13px;
+        }
+    }
+
+    @media (max-width: 536.98px) {
+        &__form {
+            display: flex;
+            flex-wrap: wrap;
+
+            .button {
+                width: 100%;
+                margin-right: 12px;
+                margin-top: 5px;
+                justify-content: center;
+                border-radius: 25px;
+            }
+        }
+    }
+
+   
 }
 // end footer
 
@@ -1038,6 +1061,20 @@ body {
             a {
                 font-size: 12px;
             }
+        }
+    }
+
+    @media (max-width: 492.98px) {
+        &__item {
+            a {
+                font-size: 10px;
+            }
+        }
+    }
+
+    @media (max-width: 442.98px) {
+        &__item {
+            display: none;
         }
     }
 }
@@ -1262,6 +1299,17 @@ body {
         }
     }
 
+    @media (max-width: 432.98px) {
+        &__button {
+            .button {
+                margin-top: 5px;
+            }
+
+            .button-primary {
+                margin-top: 0px;
+            }
+        }
+    }
     
 
 }
